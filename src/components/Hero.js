@@ -22,10 +22,56 @@ const HeroWrapper = styled.div`
   overflow: hidden;
 `;
 
-const HeroSlide = styled.div``;
-const HeroSlider = styled.div``;
-const HeroImage = styled.img``;
-const HeroContent = styled.div``;
+const HeroSlide = styled.div`
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+`;
+
+const HeroSlider = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const HeroImage = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+`;
+
+const HeroContent = styled.div`
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+  width: calc(100% - 100px);
+  color: #fff;
+
+  h1 {
+    font-size: clamp(1rem, 8vw, 2rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    margin-bottom: 0.8rem;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+`;
+
 const Arrow = styled(IoMdArrowRoundForward)``;
 
 const SliderButtons = styled.div`
@@ -66,22 +112,22 @@ const Hero = ({ slides }) => {
   return (
     <HeroSection>
       <HeroWrapper>
-        {slides.map((slides, index) => {
+        {slides.map((slide, index) => {
           return (
             <HeroSlide key={index}>
               <HeroSlider>
-                <HeroImage />
+                <HeroImage src={slide.image} alt={slides.alt} />
                 <HeroContent>
-                  <h1>{slides.title}</h1>
-                  <p>{slides.price}</p>
+                  <h1>{slide.title}</h1>
+                  <p>{slide.price}</p>
                   <Button
-                    to={slides.path}
+                    to={slide.path}
                     primary={true}
                     css={`
                       max-width: 140px;
                     `}
                   >
-                    {slides.label}
+                    {slide.label}
                     <Arrow />
                   </Button>
                 </HeroContent>
