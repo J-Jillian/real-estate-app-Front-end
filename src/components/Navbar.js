@@ -38,7 +38,7 @@ const Logo = styled.img`
 const MenuBars = styled(HiMenuAlt3)`
   display: none;
   color: #fff;
-  
+
   @media screen and (max-width: 768px) {
     display: block;
   }
