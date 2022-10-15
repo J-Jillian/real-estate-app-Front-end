@@ -12,10 +12,10 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
-  z-inde: 100;
+  z-index: 100;
   position: fixed;
   width: 100%;
-  background: red;
+  background: black;
 `;
 
 const NavLink = css`
@@ -82,7 +82,6 @@ const Navbar = () => {
       </NavMenu>
       <NavBtn>
         <Button to="/contact" primary="true">
-          {" "}
           CONTACT US
         </Button>
       </NavBtn>
