@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { MenuData } from "../data/MenuData";
+import { menuData } from "../data/menuData";
 import { css } from "styled-components/macro";
 import { Button } from "./Button.js";
 import logoInmex from "../assets/logo.png";
@@ -68,13 +68,13 @@ const NavBtn = styled.div`
   }
 `;
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
   return (
     <Nav>
       <Logo to="/" src={logoInmex} />
-      <MenuBars />
+      <MenuBars onClick={toggle} />
       <NavMenu>
-        {MenuData.map((item, index) => (
+        {menuData.map((item, index) => (
           <NavMenuLinks to={item.link} key={index}>
             {item.title}
           </NavMenuLinks>
