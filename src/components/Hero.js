@@ -1,5 +1,5 @@
 import { Button } from "./Button.js";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled, { css } from "styled-components/macro";
 import { SliderData } from "../data/SliderData.js";
 import { IoMdArrowRoundForward } from "react-icons/io";
@@ -115,6 +115,20 @@ const Hero = ({ slides }) => {
   const length = slides.length;
   const timeOut = useRef();
 
+  // useEffect(() => {
+  //   const nextSlide = () => {
+  //     SetCurrentSlide((currentSlide) =>
+  //       currentSlide === length - 1 ? 0 : currentSlide + 1
+  //     );
+  //   };
+  //   timeOut.currentSlide = setTimeout(nextSlide, 2000);
+  //   return function () {
+  //     if (timeOut.currentSlide) {
+  //       clearTimeout(timeOut.currentSlide);
+  //     }
+  //   };
+  // }, [currentSlide, length]);
+
   const nextSlide = () => {
     SetCurrentSlide(currentSlide === length - 1 ? 0 : currentSlide + 1);
     console.log(currentSlide);
@@ -124,6 +138,10 @@ const Hero = ({ slides }) => {
     SetCurrentSlide(currentSlide === length - 1 ? 0 : currentSlide - 1);
     console.log(currentSlide);
   };
+
+  if (!Array.isArray(slides) || slides.length === 0) {
+    return null;
+  }
 
   return (
     <HeroSection>
