@@ -2,6 +2,7 @@ import { Button } from "./Button.js";
 import React from "react";
 import { BiSearchAlt } from "react-icons/bi";
 import styled from "styled-components";
+import Heading from "./Heading.js";
 
 const Section = styled.section`
   background-color: red;
@@ -28,9 +29,9 @@ const Section = styled.section`
 `;
 
 const Container = styled.div`
-  padding-top: 15%;
+  padding-top: 5%;
   @media screen and (max-width: 800px) {
-    padding-top: 30%;
+    padding-top: 5%;
   }
 `;
 
@@ -71,6 +72,10 @@ const SearcBar = () => {
   return (
     <Section>
       <Container className="container">
+        <Heading
+          title="Encuentra tu propiedad"
+          subtitle="Tenemos las mejores propiedades del bajío para tí"
+        />
         <Form className="flex">
           <Box>
             <Span>Ciudad/Calle</Span>

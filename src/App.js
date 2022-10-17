@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import InfoSection from "./components/InfoSection";
 import { InfoData } from "./data/InfoData";
 import SearcBar from "./components/SearcBar";
+import Recent from "./components/Recent";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +23,7 @@ function App() {
       <Dropdown isOpen={isOpen} toggle={toggle} />
       <Hero slides={SliderData} />
       <SearcBar />
+      <Recent />
       <InfoSection {...InfoData} />
     </>
   );

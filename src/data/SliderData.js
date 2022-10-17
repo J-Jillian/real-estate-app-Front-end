@@ -2,6 +2,7 @@ import ImageOne from "../assets/imageOne.jpeg";
 import ImageTwo from "../assets/imageTwo.jpeg";
 import ImageThree from "../assets/imageThree.jpeg";
 import ImageFour from "../assets/imageFour.jpeg";
+import recent from "../assets/recent.jpeg";
 
 export const SliderData = [
   {
@@ -10,7 +11,7 @@ export const SliderData = [
     price: "4,500.00",
     path: "/homes",
     label: "view Home",
-    image: ImageOne,
+    image: recent,
     alt: "casa renta",
   },
   {
