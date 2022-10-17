@@ -8,6 +8,7 @@ import InfoSection from "./components/InfoSection";
 import { InfoData } from "./data/InfoData";
 import SearcBar from "./components/SearcBar";
 import Recent from "./components/Recent";
+import Footer from "./components/Footer";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,7 @@ function App() {
       <SearcBar />
       <Recent />
       <InfoSection {...InfoData} />
+      <Footer />
     </>
   );
 }
