@@ -10,6 +10,7 @@ export const Button = styled(Link)`
   cursor:pointer;
   text-decoration:none;
   transition:0.3s
+  border-radius: 5px;
 display: flex;
 justify-content:center;
 align-items:center;
