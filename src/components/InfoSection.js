@@ -19,6 +19,14 @@ const Container = styled.div`
   } ;
 `;
 const ColumnLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 1.4;
+  padding: 2rem 2rem;
+  order: ${({ reverse }) => (reverse ? "2" : "1")};
+
   h1 {
     margin-bottom: 1rem;
     font-size: clamp(1.5rem, 6vw, 2rem);
@@ -26,14 +34,8 @@ const ColumnLeft = styled.div`
 
   p {
     margin-bottom: 2rem;
+    font-size: 18px;
   }
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  line-height: 1.4;
-  padding: 1rem 2rem;
-  order: ${({ reverse }) => (reverse ? "2" : "1")};
 `;
 
 const ColumnRigth = styled.div`
@@ -51,12 +53,14 @@ const ColumnRigth = styled.div`
     width: 100%;
     height: 100%;
     object-fit: cover;
+  
 
     @media screen and (max-width: 768px) {
       width: 90%;
       height 90%;
-    }
-  }
+      margin-top:180px
+    }}
+  
 `;
 
 const InfoSection = ({
