@@ -59,7 +59,7 @@ label {
   }
 
   .box{
-    border-left: 1px solid rgba(128, 128, 128, 0.2);
+    ft: 1px solid rgba(128, 128, 128, 0.2);
 
     @media screen and (max-width: 800px) {
       border-left: none;
@@ -74,8 +74,7 @@ label {
     .container {
         max-width: 90%;
       }
-
-      
+  
   }
 
   .grid5 {
@@ -99,6 +98,10 @@ label {
     margin-bottom: 80px;
   }
 
+  .padding {
+    padding: 80px 0;
+  }
+
   @media screen and (max-width: 800px) {
     .grid4,
     .grid3,
@@ -112,6 +115,38 @@ label {
     .back {
       height: 30vh;
     }
+  }
+
+  .back {
+    height: 40vh;
+    position: relative;
+  }
+  .back img {
+    height: 40vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  .back::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    background: rgba(17, 40, 72, 0.629);
+    z-index: -1;
+  }
+  .back .container {
+    color: #fff;
+    padding: 120px 0;
+  }
+  .back h1 {
+    font-size: 40px;
+    font-weight: 500;
   }
 
 

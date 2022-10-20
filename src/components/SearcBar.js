@@ -3,13 +3,19 @@ import React from "react";
 import { BiSearchAlt } from "react-icons/bi";
 import styled from "styled-components";
 import Heading from "./Heading.js";
+import SearchBarImg from "../assets/recent.jpeg";
 
 const Section = styled.section`
-  background-color: red;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url(${SearchBarImg});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   padding-top: 15%;
 
@@ -70,10 +76,10 @@ const Box = styled.div`
 
 const SearcBar = () => {
   return (
-    <Section>
+    <Section imgUrl="../assets/recent.jpeg">
       <Container className="container">
         <Heading
-          title="Encuentra tu propiedad"
+          title="Casas en Venta, Renta y Propiedades Comerciales"
           subtitle="Tenemos las mejores propiedades del bajío para tí"
         />
         <Form className="flex">

@@ -22,6 +22,10 @@ const Box = styled.div`
     font-size: 20px;
     color: #bec7d8;
   }
+
+  p {
+    color: #72809d;
+  }
 `;
 const ImgContainer = styled.div`
   padding: 15px;
@@ -65,7 +69,7 @@ const RecentCard = () => {
                   {location}
                 </p>
                 <div>
-                  <Button primary="true">{price}</Button>{" "}
+                  <Button primary="true">{price}</Button>
                   <label htmlFor="">/mt2</label>
                 </div>
                 <span>{type}</span>

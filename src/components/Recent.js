@@ -4,15 +4,8 @@ import Heading from "./Heading.js";
 import RecentCard from "./RecentCard.js";
 
 const Section = styled.section`
-  padding: 30px;
-  margin-top: 100px;
-
-  p {
-    color: #72809d;
-  }
-  .button {
-    border-top: 1px solid #e4e8f3;
-    padding: 10px 30px;
+  .text {
+    padding: 30px;
   }
 `;
 const Container = styled.div``;
@@ -22,10 +15,7 @@ const Recent = () => {
     <>
       <Section className="recent padding">
         <Container className="container">
-          <Heading
-            title="Recent Property Listed"
-            subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-          />
+          <Heading title="Propiedades Recientes" subtitle="" />
           <RecentCard />
         </Container>
       </Section>
