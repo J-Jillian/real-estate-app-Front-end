@@ -13,6 +13,7 @@ const Section = styled.section`
 `;
 const Box = styled.div`
   display: flex;
+
   @media screen and (max-width: 768px) {
     div {
       flex-direction: column;
@@ -50,7 +51,7 @@ const ContactForm = () => {
         />
         <Box className="container">
           <Form className="shadow">
-            <h4>Fillup The Form</h4> <br />
+            <h4>Contáctanos</h4> <br />
             <Box>
               <input type="text" placeholder="name" />
               <input type="to:email" placeholder="email" />

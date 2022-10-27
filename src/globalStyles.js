@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -102,6 +103,8 @@ label {
     padding: 80px 0;
   }
 
+
+
   @media screen and (max-width: 800px) {
     .grid4,
     .grid3,
@@ -117,37 +120,7 @@ label {
     }
   }
 
-  .back {
-    height: 40vh;
-    position: relative;
-  }
-  .back img {
-    height: 40vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    object-fit: cover;
-  }
-
-  .back::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40vh;
-    background: rgba(17, 40, 72, 0.629);
-    z-index: -1;
-  }
-  .back .container {
-    color: #fff;
-    padding: 120px 0;
-  }
-  .back h1 {
-    font-size: 40px;
-    font-weight: 500;
-  }
+ 
 
 
 `;

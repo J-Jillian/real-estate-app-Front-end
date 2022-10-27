@@ -11,6 +11,7 @@ import GlobalStyle from "./globalStyles";
 import Dropdown from "./components/Dropdown";
 import React, { useState } from "react";
 import Footer from "./components/Footer";
+import AdminPanel from "./pages/AdminPanel";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,11 +28,12 @@ function App() {
       {/* <Hero slides={SliderData} /> */}
       {/* <InfoSection {...InfoData} /> */}
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/nosotros" element={<Nosotros />}></Route>
-        <Route path="/servicios" element={<Servicios />}></Route>
-        <Route path="/propiedades" element={<Propiedades />}></Route>
-        <Route path="/contacto" element={<Contacto />}></Route>
+        <Route path="/" element={<Home />} exact></Route>
+        <Route path="/nosotros" element={<Nosotros />} exact></Route>
+        <Route path="/servicios" element={<Servicios />} exact></Route>
+        <Route path="/propiedades" element={<Propiedades />} exact></Route>
+        <Route path="/contacto" element={<Contacto />} exact></Route>
+        <Route path="/adminpanel" element={<AdminPanel />} exact></Route>
       </Routes>
       <Footer />
     </>
