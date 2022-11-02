@@ -11,7 +11,8 @@ import GlobalStyle from "./globalStyles";
 import Dropdown from "./components/Dropdown";
 import React, { useState } from "react";
 import Footer from "./components/Footer";
-import AdminPanel from "./pages/AdminPanel";
+import AdminPanel from "./pages/admin/AdminPanel";
+import AddProperty from "./pages/admin/AddProperty";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,6 +35,7 @@ function App() {
         <Route path="/propiedades" element={<Propiedades />} exact></Route>
         <Route path="/contacto" element={<Contacto />} exact></Route>
         <Route path="/adminpanel" element={<AdminPanel />} exact></Route>
+        <Route path="/addproperty" element={<AddProperty />} exact></Route>
       </Routes>
       <Footer />
     </>
