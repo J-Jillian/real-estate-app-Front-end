@@ -13,6 +13,7 @@ import React, { useState } from "react";
 import Footer from "./components/Footer";
 import AdminPanel from "./pages/admin/AdminPanel";
 import AddProperty from "./pages/admin/AddProperty";
+import Test from "./pages/admin/Test";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,6 +27,7 @@ function App() {
       <GlobalStyle />
       <Navbar toggle={toggle} />
       <Dropdown isOpen={isOpen} toggle={toggle} />
+      <Test />
       {/* <Hero slides={SliderData} /> */}
       {/* <InfoSection {...InfoData} /> */}
       <Routes>
